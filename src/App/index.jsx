@@ -1,19 +1,17 @@
-import Recipes from '../components/Recipes';
-import sword from '../assets/images/swc-sword.png';
-import swordSvg from '../assets/icons/sword.svg';
+import { lazy, Suspense } from 'react';
+import { useRoutes } from 'hookrouter';
+import { routes } from '../utils/routes';
+
+const NotFound = lazy(() => import(/*webpackChunkName: 'notFound' */ '../pages/NotFound'));
 
 export default function App() {
+  const routeResult = useRoutes(routes);
+
   return (
-    <>
-      <section className='hero'></section>
-      <main>
-        <section>
-          <h1>Oh Hai, Vamshi!</h1>
-        </section>
-        <img src={sword} alt='sword' width='250' />
-        <img src={swordSvg} alt='sword' width='250' />
-        <Recipes />
-      </main>
-    </>
+    routeResult || (
+      <Suspense fallback={null}>
+        <NotFound />
+      </Suspense>
+    )
   );
 }
