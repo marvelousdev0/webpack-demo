@@ -10,7 +10,7 @@ const plugins = [
   new CleanWebpackPlugin(),
   new MiniCssExtractPlugin(),
   new HtmlWebpackPlugin({
-    template: './src/index.html',
+    template: './public/index.html',
   }),
 ];
 
@@ -80,5 +80,6 @@ module.exports = {
   devServer: {
     contentBase: './dist',
     hot: true,
+    historyApiFallback: true,
   },
 };
