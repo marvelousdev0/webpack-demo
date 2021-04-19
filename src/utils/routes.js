@@ -1,32 +1,32 @@
-import { lazy, Suspense } from 'react';
+import loadable from '@loadable/component';
 import { Switch, Route } from 'react-router-dom';
 
-const Home = lazy(() => import(/*webpackChunkName: 'home' */ '../pages/Home'));
-const About = lazy(() => import(/*webpackChunkName: 'about' */ '../pages/About'));
-const Overview = lazy(() => import(/*webpackChunkName: 'overview' */ '../pages/Overview'));
-const Contact = lazy(() => import(/*webpackChunkName: 'contact' */ '../pages/Contact'));
+const Home = loadable(() => import(/*webpackChunkName: 'home' */ '../pages/Home'), {
+  fallback: <div>Loading...</div>,
+});
+const About = loadable(() => import(/*webpackChunkName: 'about' */ '../pages/About'), {
+  fallback: <div>Loading...</div>,
+});
+const Overview = loadable(() => import(/*webpackChunkName: 'overview' */ '../pages/Overview'), {
+  fallback: <div>Loading...</div>,
+});
+const Contact = loadable(() => import(/*webpackChunkName: 'contact' */ '../pages/Contact'), {
+  fallback: <div>Loading...</div>,
+});
 
 export const routes = (
   <Switch>
     <Route exact path='/'>
-      <Suspense fallback={null}>
-        <Home />
-      </Suspense>
+      <Home />
     </Route>
     <Route path='/about'>
-      <Suspense fallback={null}>
-        <About />
-      </Suspense>
+      <About />
     </Route>
     <Route path='/overview'>
-      <Suspense fallback={null}>
-        <Overview />
-      </Suspense>
+      <Overview />
     </Route>
     <Route path='/contact'>
-      <Suspense fallback={null}>
-        <Contact />
-      </Suspense>
+      <Contact />
     </Route>
   </Switch>
 );
