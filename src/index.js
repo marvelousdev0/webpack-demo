@@ -1,6 +1,5 @@
+import { render } from 'react-dom';
+import App from './App';
 import './styles/index.scss';
 
-const greet = 'Hello';
-const name = " Vamshi";
-
-console.log(greet.concat(name));
+render(<App />, document.getElementById('root'));
