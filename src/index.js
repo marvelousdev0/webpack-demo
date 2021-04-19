@@ -1,3 +1,6 @@
-const greet = 'Hello';
+import './styles/index.scss';
 
-console.log(greet);
+const greet = 'Hello';
+const name = " Vamshi";
+
+console.log(greet.concat(name));
