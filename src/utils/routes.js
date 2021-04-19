@@ -8,7 +8,7 @@ const Contact = lazy(() => import(/*webpackChunkName: 'contact' */ '../pages/Con
 
 export const routes = (
   <Switch>
-    <Route path='/'>
+    <Route exact path='/'>
       <Suspense fallback={null}>
         <Home />
       </Suspense>
