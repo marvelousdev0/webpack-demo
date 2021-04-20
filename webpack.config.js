@@ -38,6 +38,7 @@ module.exports = {
     rules: [
       {
         test: /\.(s[ac]|c)ss$/i,
+        include: path.resolve(__dirname, 'src'),
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
@@ -60,6 +61,7 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
+        include: path.resolve(__dirname, 'src'),
         use: {
           loader: 'babel-loader',
           options: {
