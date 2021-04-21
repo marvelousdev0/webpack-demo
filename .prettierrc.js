@@ -5,16 +5,16 @@ module.exports = {
   htmlWhitespaceSensitivity: 'css',
   insertPragma: false,
   jsxBracketSameLine: false,
-  jsxSingleQuote: true,
+  jsxSingleQuote: false,
   proseWrap: 'preserve',
   quoteProps: 'as-needed',
   requirePragma: false,
-  semi: false,
+  semi: true,
   singleQuote: true,
-  trailingComma: 'none',
+  trailingComma: 'es5',
   useTabs: false,
   vueIndentScriptAndStyle: false,
-  printWidth: 140,
+  printWidth: 120,
   tabWidth: 2,
-  rangeStart: 0
-}
+  rangeStart: 0,
+};
