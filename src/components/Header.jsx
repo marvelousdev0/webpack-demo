@@ -1,12 +1,12 @@
-import { Fragment } from 'react';
-import { Popover, Transition } from '@headlessui/react';
-import { MenuIcon, XIcon } from '@heroicons/react/outline';
+import { Fragment } from 'react'
+import { Popover, Transition } from '@headlessui/react'
+import { MenuIcon, XIcon } from '@heroicons/react/outline'
 
 const navigation = [
   { name: 'Home', href: '#' },
   { name: 'About', href: '#about' },
-  { name: 'Overview', href: '#overview' },
-];
+  { name: 'Overview', href: '#overview' }
+]
 
 export default function Header({ open }) {
   return (
@@ -17,11 +17,7 @@ export default function Header({ open }) {
             <div className='flex items-center justify-between w-full md:w-auto'>
               <a href='#'>
                 <span className='sr-only'>Workflow</span>
-                <img
-                  className='h-8 w-auto sm:h-10'
-                  src='https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg'
-                  alt=''
-                />
+                <img className='h-8 w-auto sm:h-10' src='https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg' alt='' />
               </a>
               <div className='-mr-2 flex items-center md:hidden'>
                 <Popover.Button className='bg-gray-50 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500'>
@@ -61,19 +57,11 @@ export default function Header({ open }) {
         leaveFrom='opacity-100 scale-100'
         leaveTo='opacity-0 scale-95'
       >
-        <Popover.Panel
-          focus
-          static
-          className='absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden'
-        >
+        <Popover.Panel focus static className='absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden'>
           <div className='rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden'>
             <div className='px-5 pt-4 flex items-center justify-between'>
               <div>
-                <img
-                  className='h-8 w-auto'
-                  src='https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg'
-                  alt=''
-                />
+                <img className='h-8 w-auto' src='https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg' alt='' />
               </div>
               <div className='-mr-2'>
                 <Popover.Button className='bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500'>
@@ -93,15 +81,12 @@ export default function Header({ open }) {
                 </a>
               ))}
             </div>
-            <a
-              href='#'
-              className='block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100'
-            >
+            <a href='#' className='block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100'>
               Log in
             </a>
           </div>
         </Popover.Panel>
       </Transition>
     </>
-  );
+  )
 }

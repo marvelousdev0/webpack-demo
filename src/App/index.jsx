@@ -1,6 +1,6 @@
-import { Popover } from '@headlessui/react';
-import Header from '../components/Header';
-import Home from '../pages/Home';
+import { Popover } from '@headlessui/react'
+import Header from '../components/Header'
+import Home from '../pages/Home'
 
 export default function App() {
   return (
@@ -15,14 +15,7 @@ export default function App() {
             viewBox='0 0 404 784'
           >
             <defs>
-              <pattern
-                id='f210dbf6-a58d-4871-961e-36d5016a0f49'
-                x={0}
-                y={0}
-                width={20}
-                height={20}
-                patternUnits='userSpaceOnUse'
-              >
+              <pattern id='f210dbf6-a58d-4871-961e-36d5016a0f49' x={0} y={0} width={20} height={20} patternUnits='userSpaceOnUse'>
                 <rect x={0} y={0} width={4} height={4} className='text-gray-200' fill='currentColor' />
               </pattern>
             </defs>
@@ -36,14 +29,7 @@ export default function App() {
             viewBox='0 0 404 784'
           >
             <defs>
-              <pattern
-                id='5d0dd344-b041-4d26-bec4-8d33ea57ec9b'
-                x={0}
-                y={0}
-                width={20}
-                height={20}
-                patternUnits='userSpaceOnUse'
-              >
+              <pattern id='5d0dd344-b041-4d26-bec4-8d33ea57ec9b' x={0} y={0} width={20} height={20} patternUnits='userSpaceOnUse'>
                 <rect x={0} y={0} width={4} height={4} className='text-gray-200' fill='currentColor' />
               </pattern>
             </defs>
@@ -61,5 +47,5 @@ export default function App() {
         )}
       </Popover>
     </div>
-  );
+  )
 }
