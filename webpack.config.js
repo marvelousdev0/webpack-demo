@@ -62,12 +62,15 @@ module.exports = {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         include: path.resolve(__dirname, 'src'),
-        use: {
-          loader: 'babel-loader',
-          options: {
-            cacheDirectory: true,
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              cacheDirectory: true,
+            },
           },
-        },
+          'eslint-loader',
+        ],
       },
     ],
   },
