@@ -1,6 +1,6 @@
-import { Popover } from '@headlessui/react';
 import Header from '../components/Header';
 import Home from '../pages/Home';
+import { Popover } from '@headlessui/react';
 
 export default function App() {
   return (
