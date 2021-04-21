@@ -4,28 +4,29 @@ module.exports = {
     ecmaVersion: 2020,
     sourceType: 'module',
     ecmaFeatures: {
-      jsx: true
-    }
+      jsx: true,
+    },
   },
   settings: {
     react: {
-      version: 'detect'
-    }
+      version: 'detect',
+    },
   },
   env: {
     jest: true,
     browser: true,
     amd: true,
-    node: true
+    node: true,
   },
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
-    'plugin:prettier/recommended' // Make this the last element so prettier config overrides other formatting rules
+    'plugin:prettier/recommended', // Make this the last element so prettier config overrides other formatting rules
   ],
   rules: {
+    'no-console': 1,
     'no-unused-vars': ['error', { vars: 'all', args: 'after-used', ignoreRestSiblings: false }],
     'prettier/prettier': ['error', {}, { usePrettierrc: true }],
-    'react/react-in-jsx-scope': 0
-  }
-}
+    'react/react-in-jsx-scope': 0,
+  },
+};
