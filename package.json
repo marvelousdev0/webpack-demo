@@ -6,7 +6,7 @@
     "build": "NODE_ENV=production webpack",
     "build-dev": "webpack",
     "clean": "rm -rf dist node_modules",
-    "lint": "eslint  --fix src/**/*.js",
+    "lint": "eslint  --fix src/**/*.{js,jsx}",
     "format": "prettier src/**/*.{js,jsx,scss} --write",
     "prepare": "husky install"
   },
